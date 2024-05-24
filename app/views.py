@@ -3,6 +3,7 @@ from django.http import HttpResponse
 # Create your views here.
 from app.forms import *
 
+
 def insert_topic(request):
     TIDO=TopicForm()
     d={'TIDO':TIDO}
@@ -42,7 +43,7 @@ def insert_access(request):
         if AEDO.is_valid():
             AEDO.save()#automatically save the data
 
-            return HttpResponse('Access record data insert successfully')
+            return HttpResponse('Access reco data insert successfully')
         else:
             return HttpResponse('Invalid data')
 
